@@ -1,0 +1,272 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #F7DC6F;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo a {
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #8BC34A;
+    color: #fff;
+}
+
+header .location-finder button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #8BC34A;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #333;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.hero .cta {
+    padding: 1rem 2rem;
+    background-color: #8BC34A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.services {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.services .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.services .service-category {
+    background-color: #F7DC6F;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.services .service-category h3 {
+    margin: 0;
+}
+
+.services .service-category:hover {
+    background-color: #8BC34A;
+    color: #fff;
+}
+
+.services .subcategory {
+    display: none;
+    margin-top: 1rem;
+}
+
+.services .service-item {
+    background-color: #F7DC6F;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s;
+    margin-bottom: 1rem;
+}
+
+.services .service-item:hover {
+    transform: scale(1.05);
+}
+
+.booking-form {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.booking-form h2 {
+    margin-bottom: 1rem;
+}
+
+.booking-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.booking-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.booking-form .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.booking-form .form-group input,
+.booking-form .form-group select,
+.booking-form .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.booking-form .form-group textarea {
+    resize: vertical;
+}
+
+.booking-form .cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #8BC34A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.booking-form .cta:hover {
+    background-color: #7CB342;
+}
+
+footer {
+    padding: 1rem;
+    background-color: #F7DC6F;
+    color: #333;
+    text-align: center;
+}
+
+footer .contact-info p,
+footer .social-media a {
+    margin: 0.5rem 0;
+}
+
+footer .social-media a {
+    color: #333;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    color: #8BC34A;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    header nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .services .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-form form {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    header nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .services .service-category h3 {
+        font-size: 1rem;
+    }
+
+    .services .service-item {
+        font-size: 0.8rem;
+    }
+
+    .booking-form form {
+        padding: 0;
+    }
+}
