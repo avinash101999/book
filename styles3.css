@@ -14,6 +14,7 @@ header {
     background-color: #F7DC6F;
     color: #333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 80px; /* Ensure consistent header height */
 }
 
 header .logo a {
@@ -48,13 +49,20 @@ header nav ul li a:hover {
     color: #fff;
 }
 
-header .location-finder button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #8BC34A;
-    color: #fff;
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
     cursor: pointer;
+    order: 2; /* Ensure the menu icon is on the right */
+}
+
+.nav-links {
+    display: flex; /* Ensure nav-links are displayed on larger screens */
+    order: 1; /* Ensure the nav-links are on the left */
+}
+
+.nav-links.active {
+    display: block;
 }
 
 .hero {
@@ -198,24 +206,33 @@ footer .social-media a:hover {
 /* Responsive Styles */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    header nav ul {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px; /* Adjust to match header height */
+        right: 0; /* Align the dropdown to the right */
+        width: 100%;
+        background-color: #F7DC6F;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    nav ul {
         flex-direction: column;
         gap: 0.5rem;
-        width: 100%;
-    }
-
-    header nav ul li {
-        width: 100%;
-    }
-
-    header nav ul li a {
-        display: block;
-        width: 100%;
-        text-align: center;
     }
 
     .hero {
@@ -234,24 +251,33 @@ footer .social-media a:hover {
 
 @media (max-width: 480px) {
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    header nav ul {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px; /* Adjust to match header height */
+        right: 0; /* Align the dropdown to the right */
+        width: 100%;
+        background-color: #F7DC6F;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    nav ul {
         flex-direction: column;
         gap: 0.5rem;
-        width: 100%;
-    }
-
-    header nav ul li {
-        width: 100%;
-    }
-
-    header nav ul li a {
-        display: block;
-        width: 100%;
-        text-align: center;
     }
 
     .hero {
