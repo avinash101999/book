@@ -129,7 +129,7 @@ footer .social-media a:hover {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     header {
         flex-direction: row;
         justify-content: space-between;
