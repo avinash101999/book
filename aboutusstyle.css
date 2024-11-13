@@ -14,7 +14,7 @@ header {
     background-color: #F7DC6F;
     color: #333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 50px; /* Ensure consistent header height */
+    height: 40px; /* Ensure consistent header height */
 }
 
 header .logo a {
